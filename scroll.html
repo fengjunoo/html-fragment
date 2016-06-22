@@ -19,7 +19,7 @@
 	$(window).scroll(function(){
 		var i = $(window).scrollTop();
 		var n = $('body').height() - $(window).height();
-		//console.log({"i":i,"n":n});
+		console && console.log({"i":i,"n":n});
 		if(i >= n){
 			var s  = getDiv();
 			//console.log(s);
