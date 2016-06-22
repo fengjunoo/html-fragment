@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="http://libs.useso.com/js/jquery/1.8.0/jquery-1.8.0.js"></script>
+</head>
+<body style="padding:0;margin:0;">
+<div id="a" style="background:#aa00ff;width:100%;height:600px;">
+</div>
+</body>
+</html>
+<script>
+	function getDiv(){
+		var s = Math.round(Math.random() * 100);
+		var color = "" + Math.round(Math.random() * 100) + Math.round(Math.random() * 100) + Math.round(Math.random() * 100);
+		var m  = '<div style="background:#'+color+';width:100%;height:' + s + 'px;"></div>';
+		return m;
+	}
+	$(window).scroll(function(){
+		var i = $(window).scrollTop();
+		var n = $('body').height() - $(window).height();
+		//console.log({"i":i,"n":n});
+		if(i >= n){
+			var s  = getDiv();
+			//console.log(s);
+			$('body').append(s);
+		}
+	});
+</script>
